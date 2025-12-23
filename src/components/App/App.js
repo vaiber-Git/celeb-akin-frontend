@@ -76,7 +76,6 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
 	      this.identifyCelebName(response);
-        console.log(this.state.token);
         if (response) {
           fetch('https://integrated-backend-api-prod.deltoro.shop/image', {
             method: 'put',
