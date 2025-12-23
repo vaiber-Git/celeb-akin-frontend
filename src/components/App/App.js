@@ -63,7 +63,7 @@ class App extends Component {
 
   onButtonSubmit = () => {
     this.setState({inputUrl: this.state.input});
-      fetch('http://localhost:3009/imageurl', {
+      fetch('https://integrated-backend-api-prod.deltoro.shop/imageurl', {
         method: 'post',
         headers: {
           'Authorization': `Bearer ${this.state.token}`,
@@ -78,7 +78,7 @@ class App extends Component {
 	      this.identifyCelebName(response);
         console.log(this.state.token);
         if (response) {
-          fetch('http://localhost:3009/image', {
+          fetch('https://integrated-backend-api-prod.deltoro.shop/image', {
             method: 'put',
             headers: {
             'Authorization': `Bearer ${this.state.token}`,

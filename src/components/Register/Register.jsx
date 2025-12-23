@@ -24,7 +24,7 @@ class Register extends React.Component {
 
   onSubmitSignIn = () => {
     console.log(this.state);
-    fetch("http://localhost:3009/register", {
+    fetch("https://integrated-backend-api-prod.deltoro.shop/register", {
       method: "post",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
